@@ -1,8 +1,6 @@
 # Online Bookstore Database
 
-Relational database design for an online bookstore, developed as university database coursework in 2024. The model covers customers, books, authors, publishers, warehouses and purchase baskets. Greek SQL identifiers preserve the vocabulary of the original work.
-
-This public revision includes an executable SQLite schema, fictional demo data, the seven coursework queries and automated tests. Clean copies of the original report and modelling XML are included for context; [the changes](docs/CHANGES.md) distinguish the original work from this revision.
+Relational database design for an online bookstore, developed as university database coursework in 2024. The model covers customers, books, authors, publishers, warehouses and purchase baskets. 
 
 ![Current SQLite relational model](docs/images/relational-model.png)
 
@@ -83,7 +81,7 @@ All personal records, purchases and book fixtures are fictional. `IEEE` and `Pau
 python3 -m unittest discover -s tests -v
 ```
 
-The 27 tests check all seven reports, ties, repeated buyers, empty warehouses, historical prices, foreign keys, unique keys, invalid numeric values, date validation and safe database initialization. See [verification notes](docs/VERIFICATION.md).
+The 27 tests check all seven reports, ties, repeated buyers, empty warehouses, historical prices, foreign keys, unique keys, invalid numeric values, date validation and safe database initialization. 
 
 ## Repository structure
 
@@ -96,7 +94,7 @@ The 27 tests check all seven reports, ties, repeated buyers, empty warehouses, h
 | `tests/test_database.py` | Automated functional and integrity tests |
 | `docs/model.md` | Current relationships, assumptions and field mappings |
 | `docs/images/` | Current schema preview in PNG and editable SVG formats |
-| `docs/original/` | Original report in PDF/ODT and modelling XML, with student-number headers and report metadata removed |
+| `docs/original/` | Original report in PDF and modelling XML|
 
 ## Model and scope
 
@@ -104,10 +102,10 @@ The original model is archived in [the report](docs/original/report.pdf) and [th
 
 Database constraints enforce individual references and values. After a complete import or edit, `scripts/demo.py`'s `validate()` checks that every book has an author, every purchase basket has an item and all basket dates are real calendar dates. These cross-row rules are checked by the Python validator, rather than automatically enforced at SQL commit. Stock values are explicitly maintained; this schema does not automatically deduct stock when inserting purchases.
 
-This repository demonstrates database modelling and SQL queries. The assignment brief and original private submission files are kept outside the public package.
+This repository demonstrates database modelling and SQL queries. 
 
-## Author
+## Contributor
 
-Αριστοτέλης Κασσελούρης
+- Αριστοτέλης Κασσελούρης
 
-Developed for database coursework, Department of Informatics, Aristotle University of Thessaloniki.
+for the "Database" course.
