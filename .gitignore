@@ -1,0 +1,25 @@
+# Local SQLite databases and transaction sidecars
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+
+# Local tools and generated Python files
+__pycache__/
+*.pyc
+.venv/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+~$*
+.~lock.*#
+
+# Original coursework uploads belong outside the public repository
+/eshop.pdf
+/eshop_LibreOffice.odt
+/ΕκφώνησηΒασΔεδομ.pdf
